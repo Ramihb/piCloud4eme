@@ -1,5 +1,6 @@
 package com.esprit.pi.dto;
 
+
 public class Bookdto {
 
     private int bookId;
@@ -8,6 +9,7 @@ public class Bookdto {
     private String bookPDF;
     private Float rating;
     private String feedback;
+  
 
     public String getBookDescription() {
         return bookDescription;
@@ -66,7 +68,11 @@ public class Bookdto {
         this.bookDescription = bookDescription;
         this.bookPDF = bookPDF;
         this.rating = rating;
+       
         this.feedback = feedback;
+        
     }
+
+   
 
 }

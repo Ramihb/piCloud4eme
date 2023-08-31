@@ -48,6 +48,7 @@ public class BookService implements IBookService {
         bookEntity.setFeedback(bookDto.getFeedback());
         bookEntity.setRating(bookDto.getRating());
 
+
         BookEntity savedEntity = bookRepository.save(bookEntity);
         return convertEntityToDto(savedEntity);
 

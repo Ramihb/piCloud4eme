@@ -2,6 +2,7 @@ package com.esprit.pi.entities;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "book")
 public class BookEntity {
@@ -19,6 +20,8 @@ public class BookEntity {
     private Float rating;
     @Column(name = "feedback", length = 255)
     private String feedback;
+ @Column(name = "bookPIC", length = 255)
+    private String bookPIC;
 
     public String getBookDescription() {
         return bookDescription;
@@ -26,6 +29,21 @@ public class BookEntity {
 
     public int getBookId() {
         return bookId;
+    }
+
+    public void setBookPIC(String bookPIC) {
+        this.bookPIC = bookPIC;
+    }
+
+    public BookEntity(int bookId, String bookName, String bookDescription, String bookPDF, Float rating,
+            String feedback, String bookPIC) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.bookDescription = bookDescription;
+        this.bookPDF = bookPDF;
+        this.rating = rating;
+        this.feedback = feedback;
+        this.bookPIC = bookPIC;
     }
 
     public String getBookName() {
@@ -79,5 +97,9 @@ public class BookEntity {
 
     public void setFeedback(String feedback) {
         this.feedback = feedback;
+    }
+
+    public String getBookPIC() {
+        return bookPIC;
     }
 }
