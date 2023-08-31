@@ -35,7 +35,6 @@ public class UserIMPL implements UserService {
 
     @Override
     public LoginMessage loginUser(LoginDTO loginDTO) {
-        String msg = "";
         UserEntity user1 = userRepository.findByEmail(loginDTO.getEmail());
         if(user1 != null) {
             String password = loginDTO.getPassword();
